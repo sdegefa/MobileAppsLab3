@@ -262,6 +262,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UVe-MP-bCK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eih-xU-Ebx" userLabel="Track">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -278,7 +279,7 @@
         <scene sceneID="kW6-mV-ElL">
             <objects>
                 <viewController id="47f-eH-LCj" customClass="AlbumViewController" customModule="lab_tunley" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fs1-kT-4mL" customClass="Album">
+                    <view key="view" contentMode="scaleToFill" id="Fs1-kT-4mL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -292,7 +293,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jKx-hk-Aka">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="jKx-hk-Aka" customClass="AlbumCell" customModule="lab_tunley" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zGo-Hd-7sI">
@@ -301,6 +302,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VeN-mZ-i2J">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="albumImageView"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -310,6 +312,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="VeN-mZ-i2J" secondAttribute="trailing" id="wge-Iy-oQT"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumImageView" destination="VeN-mZ-i2J" id="6Rm-TG-LPd"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -322,11 +327,11 @@
                             <constraint firstItem="BQL-gX-6GF" firstAttribute="leading" secondItem="Fs1-kT-4mL" secondAttribute="leading" id="soe-Hb-0MA"/>
                             <constraint firstAttribute="trailing" secondItem="BQL-gX-6GF" secondAttribute="trailing" id="uBr-Af-Rid"/>
                         </constraints>
-                        <connections>
-                            <outlet property="albumImageView" destination="BQL-gX-6GF" id="0nN-VQ-90s"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Albums" id="xXb-aK-Hsd"/>
+                    <connections>
+                        <outlet property="collectionView" destination="BQL-gX-6GF" id="int-3L-4zA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ug-ZZ-nOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

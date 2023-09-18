@@ -70,7 +70,7 @@ class TracksViewController: UIViewController, UITableViewDataSource {
                     // Make the table view reload now that we have new data
                     self?.tableView.reloadData()
                 }
-                print("✅ \(tracks)")
+//                print("✅ \(tracks)")
             } catch {
                 print("❌ Error parsing JSON: \(error.localizedDescription)")
             }
