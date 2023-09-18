@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tracks View Controller-->
+        <!--Tracks-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TracksViewController" customModule="lab_tunley" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,7 +84,7 @@
                             <constraint firstItem="uRD-DA-gox" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vyn-sA-vgl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RN7-BY-7fn"/>
+                    <navigationItem key="navigationItem" title="Tracks" id="RN7-BY-7fn"/>
                     <connections>
                         <outlet property="tableView" destination="uRD-DA-gox" id="s78-H2-9Z3"/>
                     </connections>
@@ -266,14 +266,53 @@
                     </tabBar>
                     <connections>
                         <segue destination="UX2-aM-6IO" kind="relationship" relationship="viewControllers" id="4r5-px-0Uj"/>
+                        <segue destination="qil-sx-dbi" kind="relationship" relationship="viewControllers" id="9Uu-yO-sPj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7H-Kq-imq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="200.76335877862596" y="3.5211267605633805"/>
         </scene>
+        <!--Albums-->
+        <scene sceneID="kW6-mV-ElL">
+            <objects>
+                <viewController id="47f-eH-LCj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fs1-kT-4mL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VnD-LQ-Pq0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Albums" id="xXb-aK-Hsd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ug-ZZ-nOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.5190839694656" y="-673.23943661971839"/>
+        </scene>
+        <!--Albums-->
+        <scene sceneID="CDH-pc-BbS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qil-sx-dbi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Albums" image="guitars.fill" catalog="system" id="UbV-lV-eCp">
+                        <color key="badgeColor" systemColor="tertiaryLabelColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VRo-mS-P69">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="47f-eH-LCj" kind="relationship" relationship="rootViewController" id="seP-oC-mlI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awI-Ti-gVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745.80152671755718" y="-673.23943661971839"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="guitars.fill" catalog="system" width="128" height="98"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
