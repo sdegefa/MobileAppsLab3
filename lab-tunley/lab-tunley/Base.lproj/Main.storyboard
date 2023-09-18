@@ -276,8 +276,8 @@
         <!--Albums-->
         <scene sceneID="kW6-mV-ElL">
             <objects>
-                <viewController id="47f-eH-LCj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fs1-kT-4mL">
+                <viewController id="47f-eH-LCj" customClass="AlbumViewController" customModule="lab_tunley" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fs1-kT-4mL" customClass="Album">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="VnD-LQ-Pq0"/>
